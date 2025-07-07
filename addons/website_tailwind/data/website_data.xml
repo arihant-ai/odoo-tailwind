@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Website Menu Item for Tailwind Documentation -->
+        <record id="menu_tailwind_docs" model="website.menu">
+            <field name="name">Tailwind CSS</field>
+            <field name="url">/tailwind-docs</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence">50</field>
+            <field name="website_id" eval="False"/>
+        </record>
+
+        <!-- Page for Tailwind CSS Documentation -->
+        <record id="page_tailwind_docs" model="website.page">
+            <field name="name">Tailwind CSS Integration</field>
+            <field name="type">qweb</field>
+            <field name="url">/tailwind-docs</field>
+            <field name="website_published">True</field>
+            <field name="is_homepage">False</field>
+            <field name="arch" type="xml">
+                <t name="Tailwind CSS Integration" t-name="website_tailwind.tailwind_docs">
+                    <t t-call="website.layout">
+                        <div id="wrap" class="oe_structure oe_empty">
+                            <section class="container py-5">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <h1 class="text-4xl font-bold text-center mb-8 text-gray-900">Tailwind CSS Integration</h1>
+                                        
+                                        <div class="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">
+                                            <div class="flex">
+                                                <div class="ml-3">
+                                                    <p class="text-sm text-blue-700">
+                                                        Tailwind CSS is now integrated with your Odoo website! 
+                                                        You can use Tailwind utility classes alongside Bootstrap components.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                                            <div class="bg-white shadow-lg rounded-lg p-6">
+                                                <h3 class="text-xl font-semibold mb-4 text-gray-800">Typography</h3>
+                                                <p class="text-gray-600 mb-2">Use Tailwind's typography utilities:</p>
+                                                <div class="space-y-2">
+                                                    <p class="text-xs text-gray-500">Extra Small Text</p>
+                                                    <p class="text-sm text-gray-600">Small Text</p>
+                                                    <p class="text-base text-gray-700">Base Text</p>
+                                                    <p class="text-lg text-gray-800">Large Text</p>
+                                                    <p class="text-xl font-bold text-gray-900">Extra Large Bold</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="bg-white shadow-lg rounded-lg p-6">
+                                                <h3 class="text-xl font-semibold mb-4 text-gray-800">Colors</h3>
+                                                <p class="text-gray-600 mb-2">Tailwind color palette:</p>
+                                                <div class="flex space-x-2 mb-2">
+                                                    <div class="w-8 h-8 bg-red-500 rounded"></div>
+                                                    <div class="w-8 h-8 bg-blue-500 rounded"></div>
+                                                    <div class="w-8 h-8 bg-green-500 rounded"></div>
+                                                    <div class="w-8 h-8 bg-yellow-500 rounded"></div>
+                                                    <div class="w-8 h-8 bg-purple-500 rounded"></div>
+                                                </div>
+                                                <div class="flex space-x-2">
+                                                    <div class="w-8 h-8 bg-gray-200 rounded"></div>
+                                                    <div class="w-8 h-8 bg-gray-400 rounded"></div>
+                                                    <div class="w-8 h-8 bg-gray-600 rounded"></div>
+                                                    <div class="w-8 h-8 bg-gray-800 rounded"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="bg-white shadow-lg rounded-lg p-6 mb-8">
+                                            <h3 class="text-xl font-semibold mb-4 text-gray-800">Buttons</h3>
+                                            <div class="space-x-4 space-y-2">
+                                                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                                    Primary Button
+                                                </button>
+                                                <button class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
+                                                    Secondary Button
+                                                </button>
+                                                <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+                                                    Success Button
+                                                </button>
+                                                <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+                                                    Danger Button
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <div class="bg-gray-50 rounded-lg p-6">
+                                            <h3 class="text-xl font-semibold mb-4 text-gray-800">Usage Instructions</h3>
+                                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                                                <li>Tailwind CSS classes work alongside Bootstrap classes</li>
+                                                <li>Use Tailwind utilities for rapid prototyping and custom styling</li>
+                                                <li>Bootstrap components remain fully functional</li>
+                                                <li>Responsive design works with both frameworks</li>
+                                                <li>Custom CSS compilation ensures optimal performance</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </t>
+                </t>
+            </field>
+        </record>
+    </data>
+</odoo>

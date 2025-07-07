@@ -1,0 +1,31 @@
+{
+  "name": "odoo-tailwind-integration",
+  "version": "1.0.0",
+  "description": "Tailwind CSS integration for Odoo 18 Website module",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./addons/website_tailwind/static/src/css/tailwind.css --watch",
+    "build-prod": "tailwindcss -i ./src/input.css -o ./addons/website_tailwind/static/src/css/tailwind.css --minify",
+    "watch": "tailwindcss -i ./src/input.css -o ./addons/website_tailwind/static/src/css/tailwind.css --watch",
+    "dev": "npm run watch"
+  },
+  "keywords": [
+    "odoo",
+    "tailwindcss",
+    "css",
+    "framework",
+    "website"
+  ],
+  "author": "Arihant AI",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.4.0",
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.10",
+    "@tailwindcss/aspect-ratio": "^0.4.2"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32"
+  }
+}
