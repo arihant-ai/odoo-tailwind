@@ -1,0 +1,189 @@
+/* Tailwind CSS Input File for Odoo Integration */
+
+/* Import Tailwind's base, components, and utilities */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom base styles that work well with Odoo */
+@layer base {
+  /* Ensure Tailwind doesn't override Odoo's base styles completely */
+  html {
+    @apply scroll-smooth;
+  }
+  
+  /* Custom focus styles that work with Odoo */
+  *:focus {
+    outline: 2px solid theme('colors.blue.500');
+    outline-offset: 2px;
+  }
+}
+
+/* Custom components layer for Odoo-specific components */
+@layer components {
+  /* Odoo-style buttons that use Tailwind utilities */
+  .btn-odoo {
+    @apply inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm;
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
+    @apply transition-colors duration-200 ease-in-out;
+  }
+  
+  .btn-odoo-primary {
+    @apply btn-odoo bg-blue-600 text-white;
+    @apply hover:bg-blue-700 focus:ring-blue-500;
+  }
+  
+  .btn-odoo-secondary {
+    @apply btn-odoo bg-gray-600 text-white;
+    @apply hover:bg-gray-700 focus:ring-gray-500;
+  }
+  
+  .btn-odoo-success {
+    @apply btn-odoo bg-green-600 text-white;
+    @apply hover:bg-green-700 focus:ring-green-500;
+  }
+  
+  .btn-odoo-danger {
+    @apply btn-odoo bg-red-600 text-white;
+    @apply hover:bg-red-700 focus:ring-red-500;
+  }
+  
+  /* Card components */
+  .card-odoo {
+    @apply bg-white rounded-lg shadow-md border border-gray-200;
+    @apply overflow-hidden;
+  }
+  
+  .card-odoo-header {
+    @apply px-6 py-4 border-b border-gray-200 bg-gray-50;
+  }
+  
+  .card-odoo-body {
+    @apply px-6 py-4;
+  }
+  
+  .card-odoo-footer {
+    @apply px-6 py-4 border-t border-gray-200 bg-gray-50;
+  }
+  
+  /* Form components */
+  .form-group-odoo {
+    @apply mb-4;
+  }
+  
+  .form-label-odoo {
+    @apply block text-sm font-medium text-gray-700 mb-2;
+  }
+  
+  .form-input-odoo {
+    @apply block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm;
+    @apply focus:outline-none focus:ring-blue-500 focus:border-blue-500;
+    @apply sm:text-sm;
+  }
+  
+  /* Alert components */
+  .alert-odoo {
+    @apply p-4 rounded-md border-l-4;
+  }
+  
+  .alert-odoo-info {
+    @apply alert-odoo bg-blue-50 border-blue-400 text-blue-700;
+  }
+  
+  .alert-odoo-success {
+    @apply alert-odoo bg-green-50 border-green-400 text-green-700;
+  }
+  
+  .alert-odoo-warning {
+    @apply alert-odoo bg-yellow-50 border-yellow-400 text-yellow-700;
+  }
+  
+  .alert-odoo-danger {
+    @apply alert-odoo bg-red-50 border-red-400 text-red-700;
+  }
+  
+  /* Navigation components */
+  .nav-odoo {
+    @apply flex space-x-8;
+  }
+  
+  .nav-odoo-item {
+    @apply text-gray-500 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium;
+    @apply transition-colors duration-200 ease-in-out;
+  }
+  
+  .nav-odoo-item-active {
+    @apply nav-odoo-item text-blue-600 bg-blue-50;
+  }
+  
+  /* Table components */
+  .table-odoo {
+    @apply min-w-full divide-y divide-gray-200;
+  }
+  
+  .table-odoo thead {
+    @apply bg-gray-50;
+  }
+  
+  .table-odoo th {
+    @apply px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider;
+  }
+  
+  .table-odoo td {
+    @apply px-6 py-4 whitespace-nowrap text-sm text-gray-900;
+  }
+  
+  .table-odoo tbody tr:nth-child(even) {
+    @apply bg-gray-50;
+  }
+}
+
+/* Custom utilities layer */
+@layer utilities {
+  /* Odoo-specific utilities */
+  .text-odoo-primary {
+    color: theme('colors.odoo-primary');
+  }
+  
+  .bg-odoo-primary {
+    background-color: theme('colors.odoo-primary');
+  }
+  
+  .border-odoo-primary {
+    border-color: theme('colors.odoo-primary');
+  }
+  
+  /* Responsive utilities for Odoo */
+  .container-odoo {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Animation utilities */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(10px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}

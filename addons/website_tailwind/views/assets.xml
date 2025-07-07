@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Frontend Assets -->
+    <template id="assets_frontend" inherit_id="web.assets_frontend">
+        <xpath expr="." position="inside">
+            <!-- Tailwind CSS - Load after Bootstrap to allow overrides -->
+            <link rel="stylesheet" type="text/css" href="/website_tailwind/static/src/css/tailwind.css"/>
+            <!-- Bootstrap-Tailwind compatibility layer -->
+            <link rel="stylesheet" type="text/css" href="/website_tailwind/static/src/css/tailwind-bootstrap-compat.css"/>
+            <!-- Tailwind initialization script -->
+            <script type="text/javascript" src="/website_tailwind/static/src/js/tailwind-init.js"></script>
+        </xpath>
+    </template>
+
+    <!-- Backend Assets -->
+    <template id="assets_backend" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <!-- Tailwind CSS for backend (limited utilities) -->
+            <link rel="stylesheet" type="text/css" href="/website_tailwind/static/src/css/tailwind-backend.css"/>
+        </xpath>
+    </template>
+
+    <!-- Website Editor Assets -->
+    <template id="assets_editor" inherit_id="website.assets_editor">
+        <xpath expr="." position="inside">
+            <!-- Tailwind CSS for website editor -->
+            <link rel="stylesheet" type="text/css" href="/website_tailwind/static/src/css/tailwind-editor.css"/>
+            <!-- Editor integration script -->
+            <script type="text/javascript" src="/website_tailwind/static/src/js/tailwind-editor.js"></script>
+        </xpath>
+    </template>
+
+    <!-- QWeb Templates for Tailwind Components -->
+    <template id="tailwind_utility_classes" name="Tailwind Utility Classes Reference">
+        <!-- This template provides a reference for commonly used Tailwind classes -->
+        <div class="d-none" id="tailwind-classes-reference">
+            <!-- Layout -->
+            <div class="container mx-auto"></div>
+            <div class="flex flex-col md:flex-row"></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"></div>
+            
+            <!-- Typography -->
+            <h1 class="text-4xl font-bold text-gray-900"></h1>
+            <p class="text-lg text-gray-600 leading-relaxed"></p>
+            
+            <!-- Spacing -->
+            <div class="p-4 m-2 space-y-4"></div>
+            
+            <!-- Colors -->
+            <div class="bg-blue-500 text-white"></div>
+            <div class="bg-gray-100 text-gray-800"></div>
+            
+            <!-- Buttons -->
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"></button>
+            
+            <!-- Cards -->
+            <div class="bg-white shadow-lg rounded-lg p-6"></div>
+        </div>
+    </template>
+</odoo>
